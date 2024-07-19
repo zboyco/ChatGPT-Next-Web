@@ -183,8 +183,7 @@ export class GeminiProApi implements LLMApi {
 
         // https://github.com/google-gemini/cookbook/blob/main/quickstarts/rest/Streaming_REST.ipynb
         const chatPath =
-          baseUrl.replace("generateContent", "streamGenerateContent") +
-          (baseUrl.indexOf("?") > -1 ? "&alt=sse" : "?alt=sse");
+          baseUrl.replace("generateContent", "streamGenerateContent");
         fetchEventSource(chatPath, {
           ...chatPayload,
           async onopen(res) {
