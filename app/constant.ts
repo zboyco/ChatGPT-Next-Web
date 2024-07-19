@@ -119,8 +119,8 @@ Latex inline: \\(x^2\\)
 Latex block: $$e=mc^2$$
 `;
 
-export const SUMMARIZE_MODEL = "gpt-3.5-turbo";
-export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
+export const SUMMARIZE_MODEL = "gpt-4o-mini";
+export const GEMINI_SUMMARIZE_MODEL = "gemini-1.5-flash-latest";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
@@ -150,6 +150,7 @@ const openaiModels = [
   "gpt-4o-2024-05-13",
   "gpt-4-vision-preview",
   "gpt-4-turbo-2024-04-09",
+  "gpt-4o-mini",
 ];
 
 const googleModels = [
