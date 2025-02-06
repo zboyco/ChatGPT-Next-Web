@@ -1,4 +1,5 @@
 FROM node:18-alpine AS base
+RUN apk update
 
 FROM base AS deps
 
@@ -8,12 +9,11 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 
-RUN yarn config set registry 'https://registry.npmmirror.com/'
 RUN yarn install
 
 FROM base AS builder
 
-RUN apk update && apk add --no-cache git
+RUN apk add --no-cache git
 
 ENV OPENAI_API_KEY=""
 ENV GOOGLE_API_KEY=""
