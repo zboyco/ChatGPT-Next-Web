@@ -254,7 +254,7 @@ Latex block: $$e=mc^2$$
 `;
 
 export const SUMMARIZE_MODEL = "gpt-4o-mini";
-export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
+export const GEMINI_SUMMARIZE_MODEL = "gemini-2.0-flash";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
@@ -312,6 +312,7 @@ const openaiModels = [
   "dall-e-3",
   "o1-mini",
   "o1-preview",
+  "gpt-4o-mini-ca"
 ];
 
 const googleModels = [
@@ -319,6 +320,14 @@ const googleModels = [
   "gemini-1.5-pro-latest",
   "gemini-1.5-flash-latest",
   "gemini-pro-vision",
+  "gemini-2.0-flash",
+  "gemini-2.0-flash-exp",
+  "gemini-2.0-flash-latest",
+  "gemini-2.0-flash-001",
+  "gemini-2.0-flash-lite",
+  "gemini-2.0-flash-lite-preview",
+  "gemini-2.0-flash-lite-preview-02-05",
+  "gemini-2.0-flash-thinking-exp",
 ];
 
 const anthropicModels = [
@@ -387,6 +396,7 @@ const iflytekModels = [
   "pro-128k",
   "generalv3.5",
   "4.0Ultra",
+  "lite",
 ];
 
 const xAIModes = ["grok-beta"];
